@@ -1,0 +1,51 @@
+{
+  "name": "persist-table-configuration",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev:vite": "vite",
+    "dev:server": "tsx src/mocks/node.ts",
+    "dev": "concurrently \"pnpm run dev:server\" \"pnpm run dev:vite\"",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@mswjs/http-middleware": "^0.10.3",
+    "@tanstack/react-query": "^5.76.1",
+    "@tanstack/react-query-devtools": "^5.76.1",
+    "@tanstack/react-table": "^8.21.3",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "graphql-request": "^7.1.2",
+    "msw": "^2.8.2",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-icons": "^5.5.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.25.0",
+    "@types/cors": "^2.8.18",
+    "@types/express": "^5.0.2",
+    "@types/node": "^22.15.21",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "@vitejs/plugin-react-swc": "^3.9.0",
+    "concurrently": "^9.1.2",
+    "eslint": "^9.25.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^16.0.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.4",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.30.1",
+    "vite": "^6.3.5"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
+  }
+}
